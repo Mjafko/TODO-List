@@ -2,7 +2,7 @@ import React, {Component} from 'react'
 
 import ItemList from '../item-list/ItemList'
 
-export class Input extends Component {
+class Input extends Component {
   constructor() {
     super()
     this.state = {
@@ -37,3 +37,5 @@ export class Input extends Component {
   );
   }
 }
+
+export default Input
