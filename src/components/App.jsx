@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 
 
 import Header from './header/Header'
+import Input from './input/Input'
+
 
 class App extends Component {
 
@@ -9,6 +11,7 @@ class App extends Component {
     return (
       <div className="App">
         <Header />
+        <Input />
       </div>
     );
   }
