@@ -5,7 +5,7 @@ import Header from './header/Header'
 import Input from './input/Input'
 
 
-class App extends Component {
+export default class App extends Component {
 
   render() {
     return (
@@ -13,8 +13,6 @@ class App extends Component {
         <Header />
         <Input />
       </div>
-    );
+    )
   }
 }
-
-export default App
