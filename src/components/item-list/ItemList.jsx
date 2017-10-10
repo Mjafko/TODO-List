@@ -61,7 +61,3 @@ const styles = StyleSheet.create({
     backgroundColor: 'green'
   }
 })
-
-// .divbutton:hover button {
-//    display: block; /* On :hover of div show button */
-// }
