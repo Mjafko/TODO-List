@@ -3,6 +3,7 @@ import { StyleSheet, css } from 'aphrodite'
 
 
 export default class ItemList extends Component {
+
   constructor() {
     super()
   }
@@ -11,15 +12,19 @@ export default class ItemList extends Component {
     let tasks = []
     for ( let key in this.props.task ) {
       tasks.push(
-        <li className={css(styles.red)} key={ key }
-          onClick={ () => this.props.deleteTask( key ) }>
+        <li className={css(styles.green)} key={ key }
+          onClick={ this.changeColor }>
           { this.props.task[ key ] }
-            <span className={ css( buttonStyle.button, buttonStyle.hover ) }><button>X</button>
-            <button>D</button></span>
+            <span className={ css( buttonStyle.button, buttonStyle.hover ) }>
+              <button onClick={ () => this.props.deleteTask( key ) }>X</button>
+            </span>
         </li>
       )
     }
     return tasks
+  }
+
+  changeColor() {
   }
 
   render() {
@@ -47,7 +52,13 @@ const buttonStyle = StyleSheet.create({
 })
 
 const styles = StyleSheet.create({
-  red: {
+  green: {
+    ':hover': {
+        backgroundColor: 'green'
+    }
+  },
+  completedTask: {
+    backgroundColor: 'green'
   }
 })
 
